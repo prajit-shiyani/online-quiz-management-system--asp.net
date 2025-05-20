@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Views_Admin_AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="../../Assets/Lib/Bootstrap/css/bootstrap.min.css"/>
+    <style>
+        *{
+            font-family:Poppins;
+         }
+        
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#">ADMIN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ViewCandidates.aspx">Candidates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="Question.aspx">Questions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="Quiz.aspx">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="../Login.aspx">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="MyBody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
