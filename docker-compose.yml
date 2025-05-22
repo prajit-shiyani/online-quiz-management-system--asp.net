@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: quiz_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: onlinequiz
+      MYSQL_USER: quiz_user
+      MYSQL_PASSWORD: quiz_password
+    ports:
+      - "3309:3306"
+    volumes:
+      - ./DATA\ BASE/onlinequiz.sql:/docker-entrypoint-initdb.d/onlinequiz.sql
+      - mysql_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  mysql_data:
