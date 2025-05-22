@@ -1,0 +1,16 @@
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.pdb
+*.cache
+*.log
+*.vs/
+.vscode/
+__pycache__/
+.env
+.env.*
+.DS_Store
+Thumbs.db
